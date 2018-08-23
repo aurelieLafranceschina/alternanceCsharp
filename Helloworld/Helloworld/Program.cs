@@ -10,7 +10,12 @@ namespace Helloworld
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Bonjour");
+            DateTime theDate = DateTime.Now;
+            var Today = theDate.DayOfWeek;
+            int currentHour = theDate.Hour;
+            Console.WriteLine("Bonjour " + Environment.UserName  + " " + Today + theDate );
         }
     }
+
+    
 }
