@@ -12,7 +12,7 @@ namespace Helloworld
         static void Main(string[] args)
         {                              
 
-            Message.SayHello();
+            Message.GetHelloMessage();
         }
 
         
