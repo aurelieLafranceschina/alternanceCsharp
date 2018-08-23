@@ -4,17 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Helloworld
 {
-    class Program
+    class Program : Message
     {
         static void Main(string[] args)
-        {
-            DateTime theDate = DateTime.Now;
-            var Today = theDate.DayOfWeek;
-            int currentHour = theDate.Hour;
-            Console.WriteLine("Bonjour " + Environment.UserName  + " " + Today + theDate );
+        {                              
+
+            Message.SayHello();
         }
+
+        
     }
 
     
