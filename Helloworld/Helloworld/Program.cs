@@ -12,9 +12,18 @@ namespace Helloworld
         static void Main(string[] args)
         {
 
-           
-            Message m1 = new Message(9, 13, 18);
-            m1.GetHelloMessage();
+            do
+            {
+                Message m1 = new Message(9, 13, 18);
+                m1.GetHelloMessage();
+                
+
+            } while (
+                Console.ReadLine() != "exit"
+            );
+            
+                
+            
         }
 
 
