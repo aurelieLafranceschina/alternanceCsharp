@@ -26,49 +26,35 @@ namespace Helloworld
 
             return currentHour;
         }
+        public int h1;
+        public int h2;
+        public int h3;
 
-        public static void GetHelloMessage()
+
+        public Message(int h1 , int h2 , int h3)
+        {
+            this.h1 = h1;
+            this.h2 = h2;
+            this.h3 = h3;
+        }
+
+        public  void GetHelloMessage()
         {
 
             string user = Environment.UserName;
-            string currentDay = "Tuesday";
-            int currentHour = 7;
-            //Console.WriteLine("Bonjour " + user + " " + currentDay + " " + currentHour);
+            string currentDay = CurrentDay();
+            int currentHour = CurrentHour();
 
-            //if (currentDay != "Saturday" && currentDay != "Sunday")
-            //{
-            //    if (currentHour >= 9 && currentHour <= 13)
-            //    {
 
-            //        Console.WriteLine("Bonjour " + user);
-            //    }
-            //    else if (currentHour >= 13 && currentHour <= 18)
-            //    {
-            //        Console.WriteLine("Bon aprés-midi " + user);
-            //    }
-
-            //}
-            // if (currentDay != "Saturday" && currentDay != "Sunday" && currentDay != "Friday")
-            //{
-            //    if (currentHour >= 18 || currentHour <= 9)
-            //    {
-            //        Console.WriteLine("Bonsoir " + user);
-            //    }
-            //    else { Console.WriteLine("ERROR"); }
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Bon week-end " + user);
-            //}
-
-            if ((currentDay == "Saturday" || currentDay == "Sunday") || ((currentDay == "Monday" && currentHour <= 8) || (currentDay == "Friday" && currentHour >= 18)))
+            if ((currentDay == "Saturday" || currentDay == "Sunday") || ((currentDay == "Monday" && currentHour <= h1) || (currentDay == "Friday" && currentHour >= h3)))
             {
                 Console.WriteLine("Bon week-end " + user);
             }
-            else if(currentHour >= 9 && currentHour <=13)
+            else if (currentHour >= h2  && currentHour <= h2)
             {
-                Console.WriteLine("Bonjour " + user); }
-            else if (currentHour >= 13 && currentHour <= 18)
+                Console.WriteLine("Bonjour " + user);
+            }
+            else if (currentHour >= h2 && currentHour <= h3)
             {
                 Console.WriteLine("Bon aprés-midi " + user);
             }

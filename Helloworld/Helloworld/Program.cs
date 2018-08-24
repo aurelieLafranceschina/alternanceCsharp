@@ -7,15 +7,17 @@ using System.Threading.Tasks;
 
 namespace Helloworld
 {
-    class Program : Message
+    class Program
     {
         static void Main(string[] args)
-        {                              
+        {
 
-            Message.GetHelloMessage();
+           
+            Message m1 = new Message(9, 13, 18);
+            m1.GetHelloMessage();
         }
 
-        
+
     }
 
     
