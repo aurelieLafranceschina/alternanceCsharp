@@ -14,13 +14,13 @@ namespace ProjetTC
         static void Main(string[] args)
         {
             GetData getData = new GetData();
-            Dictionary<string, List<string>> stationsDict = getData.GetStationData();
+            Dictionary<string, List<DetailsOfLine>> stationsDict = getData.GetStationData();
             foreach (var data in stationsDict)
             {
                 Console.WriteLine("Arrêt : " + data.Key);
-                foreach (string line in data.Value)
+                foreach (DetailsOfLine line in data.Value)
                 {
-                    Console.WriteLine("Ligne : " + line);
+                    Console.WriteLine("Ligne : " + line.type +" "+  line.mode);
                 }
             }            
 

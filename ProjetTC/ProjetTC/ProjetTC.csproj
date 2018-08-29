@@ -35,8 +35,9 @@
     <Reference Include="Json.NET.Web, Version=1.0.49.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Json.NET.Web.1.0.49\lib\portable45-net45+win8+wpa81\Json.NET.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Library">
-      <HintPath>..\Library\bin\Debug\Library.dll</HintPath>
+    <Reference Include="Library, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Repository\Library.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
