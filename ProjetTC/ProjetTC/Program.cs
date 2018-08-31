@@ -20,7 +20,7 @@ namespace ProjetTC
                 Console.WriteLine("Arrêt : " + data.Key);
                 foreach (DetailsOfLine line in data.Value)
                 {
-                    Console.WriteLine("Ligne : " + line.type +" "+  line.mode);
+                    Console.WriteLine("Ligne : " + line.type +" "+  line.mode + " " + line.textColor);
                 }
             }            
 

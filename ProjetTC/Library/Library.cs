@@ -50,15 +50,14 @@ namespace Library
             List<Donnees> stationList = JsonConvert.DeserializeObject<List<Donnees>>(responseFromServer);
             //List<ObjectDetails>objectDetails = JsonConvert.DeserializeObject<List<ObjectDetails>>(detailsResponse);
 
-            String UrlOptions = UrlLinesDetails(stationList);
-            string urlDetails = string.Format("http://data.metromobilite.fr/api/routers/default/index/routes?codes={0}", UrlOptions);
-            string linesDetails = doRequest(urlDetails);
+            //String UrlOptions = UrlLinesDetails(stationList);
+            //string urlDetails = string.Format("http://data.metromobilite.fr/api/routers/default/index/routes?codes={0}", UrlOptions);
+            //string linesDetails = doRequest(urlDetails);
 
             ////List<allData> stationAndDetails = stationList.AddRange(objectDetails);
 
             //-- Create A dictionary with each stop and their lines
             Dictionary<string, List<DetailsOfLine>> stationsDict = new Dictionary<string, List<DetailsOfLine>>();
-            Console.WriteLine(linesDetails);
             stationsDict = ToolBox.GetListNameWithoutDuplicateAsDictionnary(stationList);
 
             return stationsDict;
