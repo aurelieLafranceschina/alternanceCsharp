@@ -14,7 +14,7 @@ namespace ProjetTC
         static void Main(string[] args)
         {
             GetData getData = new GetData();
-            Dictionary<string, List<DetailsOfLine>> stationsDict = getData.GetStationData();
+            Dictionary<string, List<DetailsOfLine>> stationsDict = getData.GetStationDataToDictionary();
             foreach (var data in stationsDict)
             {
                 Console.WriteLine("Arrêt : " + data.Key);

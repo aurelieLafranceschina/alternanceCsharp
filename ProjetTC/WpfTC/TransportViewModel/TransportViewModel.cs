@@ -26,7 +26,7 @@ namespace WpfTC
         }
         public void fillView()
         {
-            Dictionary <string , List<DetailsOfLine>>list =  getData.GetStationData();
+            Dictionary <string , List<DetailsOfLine>>list =  getData.GetStationDataToDictionary();
             foreach (var item in list)
             {
                 this._getStationDictionary.Add(new GetStationforWPF(item.Key, item.Value));
